@@ -12,7 +12,7 @@ Remote sensing foundation models have made significant progress in visual tasks 
 
 <figure>
 <img src=RBiFormer.png>
-<figcaption align = "center"><b><center>Fig.  The overall framework of R<sup>3</sup>BiFormer model</b></center></figcaption>
+<figcaption style="text - align:center;"><b>Fig.  The overall framework of R<sup>3</sup>BiFormer model</b></figcaption>
 </figure>
 <figure>
 <div align="center">
