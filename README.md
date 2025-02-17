@@ -56,21 +56,43 @@ Training the R<sup>3</sup>BiFormer on LEVIR-CD dataset:
 
 ```
 python -m torch.distributed.launch --nproc_per_node=1 --master_port=40001 tools/train.py \
-configs/upernet/BiFormer/upernet_R3BiFormer_512x512_80k_potsdam_epoch300.py \
+configs/upernet/BiFormer/upernet_R3BiFormer_512x512_160k_potsdam_rgb_dpr10_lr6e5_lrd90_ps16_class5_ignore5_optimizer_model.py \
 --launcher 'pytorch'
 ```
+#### Object Detection
+Training the R<sup>3</sup>BiFormer on DOTA dataset: 
 
-Training the DSQNet with ViTAEv2-S backbone on S2Looking dataset: 
+```
+python -m torch.distributed.launch --nproc_per_node=1 --master_port=50002 tools/train.py \
+configs/obb/oriented_rcnn/faster_rcnn_orpn_our_imp_biformer_fpn_1x_dota20.py \
+--launcher 'pytorch' --options 'find_unused_parameters'=True
+```
 
+#### ChangeDeteciton
+Training the R<sup>3</sup>BiFormer on S2Looking dataset: 
+
+```
+python tools/train.py configs/DSQNet/DSQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py --work-dir ./DSQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py
+```
 ### Inference
-
-Evaluation using Swin-T backbone on LEVIR-CD dataset
-
+#### Sematic Segmentation
+Evaluation using R<sup>3</sup>BiFormer backbone on Potsdam dataset
 ```
-python tools/test.py configs/DSQNet/DSQNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01.py [model pth] --show-dir visualization/LEVIR
+python tools/test.py configs/upernet/BiFormer/upernet_R3BiFormer_512x512_160k_potsdam_rgb_dpr10_lr6e5_lrd90_ps16_class5_ignore5_optimizer_model.py \ \
+[model path] --show-dir [img save path] \
+--eval mIoU 'mFscore'
 ```
 
-Evaluation using ViTAEv2-S backbone on S2Looking dataset
+### Object Detection
+Evaluation using R<sup>3</sup>BiFormer backbone on DOTA dataset
+```
+python tools/test.py configs/obb/oriented_rcnn/faster_rcnn_orpn_our_imp_biformer_fpn_1x_dota20.py \
+--out [result file] --eval 'mAP' \
+--show-dir [saved map path]
+```
+### Change Detection
+
+Evaluation using R<sup>3</sup>BiFormer backbone on S2Looking dataset
 
 ```
 python tools/test.py configs/DSQNet/DSQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py [model pth] --show-dir visualization/S2Looking
