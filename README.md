@@ -1,10 +1,10 @@
 # R<sup>3</sup>BiFormer: An Enhanced Vision Transformer for Remote Sensing Foundation Model
 
 <p align="center">
-  | <a href="##Introduction">Introduction</a> |
+  | <a href="##introduction">Introduction</a> |
   <a href="##Results">Results</a> |
   <a href="##usage">Usage</a> |
-</p>
+</p >
 
 ## Introduction
 
