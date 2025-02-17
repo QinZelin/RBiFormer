@@ -4,7 +4,7 @@
   | <a href="##Introduction">Introduction</a> |
   <a href="##Results">Results</a> |
   <a href="##usage">Usage</a> |
-</p >
+</p>
 
 ## Introduction
 
