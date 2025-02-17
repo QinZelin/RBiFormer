@@ -1,9 +1,9 @@
 # R<sup>3</sup>BiFormer: An Enhanced Vision Transformer for Remote Sensing Foundation Model
 
 <p align="center">
-  | <a href="## introduction">Introduction</a> |
-  <a href="## Results">Results</a> |
-  <a href="## usage">Usage</a> |
+  | <a href="##Introduction">Introduction</a> |
+  <a href="##Results">Results</a> |
+  <a href="##usage">Usage</a> |
 </p >
 
 ## Introduction
@@ -85,14 +85,14 @@ python tools/test.py configs/upernet/BiFormer/upernet_R3BiFormer_512x512_160k_po
 --eval mIoU 'mFscore'
 ```
 
-### Object Detection
+#### Object Detection
 Evaluation using R<sup>3</sup>BiFormer backbone on DOTA dataset
 ```
 python tools/test.py configs/obb/oriented_rcnn/faster_rcnn_orpn_our_imp_biformer_fpn_1x_dota20.py \
 --out [result file] --eval 'mAP' \
 --show-dir [saved map path]
 ```
-### Change Detection
+#### Change Detection
 
 Evaluation using R<sup>3</sup>BiFormer backbone on S2Looking dataset
 
