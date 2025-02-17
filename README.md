@@ -17,8 +17,8 @@ Remote sensing foundation models have made significant progress in visual tasks 
 <figure>
 <div align="center">
 <img src=RBRA.png>
-<figcaption align = "center"><b>Fig. The difference of R<sup>3</sup>BRA mechanism and BRA mechanism</b></figcaption>
 </div>
+<figcaption align = "center"><b>Fig. The difference of R<sup>3</sup>BRA mechanism and BRA mechanism</b></figcaption>
 </figure>
 
 ## Results
