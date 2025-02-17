@@ -1,9 +1,9 @@
 # R<sup>3</sup>BiFormer: An Enhanced Vision Transformer for Remote Sensing Foundation Model
 
 <p align="center">
-  | <a href="##introduction">Introduction</a> |
-  <a href="##Results">Results</a> |
-  <a href="##usage">Usage</a> |
+  | <a href="## introduction">Introduction</a> |
+  <a href="## Results">Results</a> |
+  <a href="## usage">Usage</a> |
 </p >
 
 ## Introduction
@@ -12,7 +12,7 @@ Remote sensing foundation models have made significant progress in visual tasks 
 
 <figure>
 <img src=RBiFormer.png>
-<figcaption style="text - align:center;"><b>Fig.  The overall framework of R<sup>3</sup>BiFormer model</b></figcaption>
+<figcaption align = "center"><b>Fig.  The overall framework of R<sup>3</sup>BiFormer model</b></figcaption>
 </figure>
 <figure>
 <div align="center">
